@@ -8,3 +8,17 @@ public class Drinks{
 3. Створити View (папка Views) - Drinks в якому вивести один напій.
 
 Потренуватися сворювати Model -> Метод в контроллері-> View, без прив'язки до бд. 
+
+Цикл команд GIT:
+- git init
+- git status
+- git add .
+- git status
+- git commit -m "commit name"
+
+
+Добавление коммитов в репозиторий на GitHub:
+push an existing repository from the command line
+git remote add origin https://github.com/vinil2001/ForumCore.git 
+git branch -M master
+git push -u origin master
