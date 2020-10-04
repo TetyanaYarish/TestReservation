@@ -1,0 +1,10 @@
+19.09.2020
+1. Створити модель Drinks
+public class Drinks{
+	public int id {get; set;}
+	public string ...
+}
+2. Створити в контроллері метод GetDrinks який буде повертати View(drinks)
+3. Створити View (папка Views) - Drinks в якому вивести один напій.
+
+Потренуватися сворювати Model -> Метод в контроллері-> View, без прив'язки до бд. 
