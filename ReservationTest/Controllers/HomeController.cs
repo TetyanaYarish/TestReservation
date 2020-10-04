@@ -46,24 +46,52 @@ namespace ReservationTest.Controllers
                 return View();
         }
 
+        Drink drink = new Drink();
+        
+        public IActionResult GetDrinks()
+        {
+            List<Drink> drinksToView = new List<Drink>();
+
+            drinksToView = _context.Drinks.ToList();
+
+            if (drinksToView != null)
+                return View(drinksToView);
+            else
+                return View(new List<Drink>());
+        }
+
 
         // Метод що додає данні в db
         private void AddDataToDB()
         {
-            List<Meal> meals = new List<Meal>();
 
-            meal.Name = "Meal1";
-            meal.Description = "Description kjnjhbvjbjhvgv";
+            //List<Meal> meals = new List<Meal>();
 
-            meals.Add(meal);
-            _context.Add(meal);
+            //meal.Name = "Meal1";
+            //meal.Description = "Description kjnjhbvjbjhvgv";
 
-            menus.Name = "Menues";
-            menus.Description = "As the premier restaurant in Rhodes, we are proud to offer a fabulous array of fresh, authentic cuisine. Phoenix offers our famous menu in Rhodes as well as A La Carte options daily, with exclusive, ever-changing menu’s to suit all tastes";
-            menus.ListOfMeals = meals;
+            //meals.Add(meal);
+            //_context.Add(meal);
 
-            _context.Add(menus);
+            //menus.Name = "Menues";
+            //menus.Description = "As the premier restaurant in Rhodes, we are proud to offer a fabulous array of fresh, authentic cuisine. Phoenix offers our famous menu in Rhodes as well as A La Carte options daily, with exclusive, ever-changing menu’s to suit all tastes";
+            //menus.ListOfMeals = meals;
+
+            //_context.Add(menus);
+            //_context.SaveChanges();
+
+            List<Drink> drinks = new List<Drink>();
+
+            for(int i = 1; i < 5; i++)
+            {
+                drink.Name = "Drink " + i;
+                drink.Description = "Description " + i;
+                drink.Price = i * 5.5;
+                drinks.Add(drink);
+            }
+
             _context.SaveChanges();
+
         }
       
         [HttpGet]

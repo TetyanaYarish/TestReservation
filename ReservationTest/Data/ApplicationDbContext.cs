@@ -18,7 +18,7 @@ namespace ReservationTest.Data
         public DbSet<Menus> Menus { get; set; }
         public DbSet<Meal> Meals { get; set; }
 
-        //public DbSet<Drinks> Drinks { get; set; }
+        public DbSet<Drink> Drinks { get; set; }
 
         //public DbSet<PhoneNumber> PhoneNumbers { get; set; }
 
